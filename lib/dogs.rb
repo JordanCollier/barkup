@@ -31,8 +31,25 @@ class Dogs
 
   # only edit below this line
 
+  def small_dogs
+    @dogs.select {|dog| dog[:size] == :small}
+  end
 
+  def huge_dog
+    @dogs.select {|dog| dog[:size] == :huge}[0]
+  end
 
+  def large_dog_names
+    @dogs.select {|dog| dog[:size] == :large}.map {|x| x[:name]}
+  end
+
+  def joes_large_dogs
+    @dogs.select {|dog| dog[:owner][:name][:first] == "Joe"}.select {|x| x[:size] == :large}.map {|x| x[:name]}
+  end
+
+  def sizes
+    @dogs.select {|dog| dog[:size] == :medium }
+  end
 
 
 

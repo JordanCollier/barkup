@@ -4,7 +4,7 @@ require 'dogs'
 describe Dogs do
   let(:dogs) { Dogs.new }
 
-  describe "#small_dog" do
+  describe "#small_dogs" do
     it "returns all of the small dogs" do
       small_dogs = dogs.small_dogs
       expect(small_dogs.length).to eq(2)
@@ -19,7 +19,7 @@ describe Dogs do
     end
   end
 
-  describe "#large_dogs_names" do
+  describe "#large_dog_names" do
     it "returns all of the big dogs" do
       expect(dogs.large_dog_names).to match_array(["Fido", "Bruiser", "Beast"])
     end
